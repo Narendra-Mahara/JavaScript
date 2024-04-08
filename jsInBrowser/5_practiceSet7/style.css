@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: 50px;
+  width: 100%;
+  background-color: #e0f3f3;
+  color: rgb(72, 50, 50);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+li{
+    list-style: none;
+    cursor: pointer;
+}
