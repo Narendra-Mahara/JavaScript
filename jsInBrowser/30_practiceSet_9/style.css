@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.animePic {
+  height: 1000px;
+  width: 800px;
+}
+
+#btn {
+  position: absolute;
+  top: 100px;
+  left: 1000px;
+}
