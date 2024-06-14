@@ -1,5 +1,6 @@
 let userInput = document.getElementsByClassName("add")[0];
 let mainDiv = document.getElementsByClassName("main")[0];
+let todoLists = document.getElementsByClassName("todoLists")[0];
 let button = document.getElementById("btn");
 let tTask = document.getElementById("t-task");
 let ctask = document.getElementById("c-task");
@@ -13,15 +14,29 @@ const countTotalTask = () => {
 
 const addTask = () => {
   if (userInput.value == "") {
-    alert("Enter any taksk");
+    let alert = document.createElement("div");
+    alert.style.height = "50px";
+    alert.style.width = "200px";
+    alert.style.marginTop = "5px";
+    // alert.style.paddingLeft = "10px";
+    alert.style.display = "flex";
+    alert.style.alignItems = "center";
+    alert.style.justifyContent = "space-around";
+    alert.style.color = "black";
+    mainDiv.before(alert);
+    alert.style.border = " 1.5px solid white";
+    alert.innerHTML = `<ion-icon name="warning-outline"></ion-icon><p> Please Enter One Task.</p>`;
+    alert.style.borderRadius = "1rem";
+    setTimeout(() => {
+      alert.remove();
+    }, 2000);
   } else {
     totalTask++;
-    console.log(userInput.value);
     let newTodo = document.createElement("div");
     newTodo.style.height = "35px";
     newTodo.style.width = "100%";
     newTodo.style.marginTop = "5px";
-    newTodo.style.borderRadius = "0.7rem";
+    newTodo.style.borderRadius = "0.5rem";
     newTodo.style.display = "flex";
     newTodo.style.alignItems = "center";
     newTodo.style.paddingLeft = "5px";
@@ -30,8 +45,10 @@ const addTask = () => {
     newTodo.style.backgroundColor = "#EADDA6";
     localStorage.setItem(`Task${totalTask}`, `${userInput.value}`);
     newTodo.innerHTML = userInput.value;
-    mainDiv.append(newTodo);
+    todoLists.append(newTodo);
+    todoLists.removeAttribute("hidden");
     countTotalTask();
+    userInput.value = "";
     newTodo.addEventListener("click", () =>
       countCompletedTask(newTodo, userInput.value)
     );
@@ -43,7 +60,7 @@ const countCompletedTask = (newTodo, userInput) => {
     console.log("task completed");
     completedTask++;
     ctask.innerText = completedTask;
-    newTodo.innerHTML = `<del>${userInput}</del><span style="margin-left: 20px; font-size:1rem;">Completed</span>`;
+    newTodo.innerHTML = `<del>${newTodo.innerHTML}</del><div style=" height: 30px; padding:5px; border:1px solid white;margin-left: 20px; display:flex; align-items:center; justify-content:center; font-size:1rem; border-radius:0.5rem;">Completed</div>`;
     localStorage.removeItem(`Task${totalTask}`);
   }
 };
