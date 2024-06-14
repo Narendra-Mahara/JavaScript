@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100vh;
+  background-color: #048a81;
+}
+
+/* .for-search {
+  width: 50%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #06d6a0;
+  outline: none;
+} */
+
+/* .search {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+outline: none;
+font-size: 1.2rem;
+} */
+
+.main {
+  width: 50%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #06d6a0;
+  /* color: white; */
+}
+
+.add {
+  width: 70%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  /* background-color: #4caf50; */
+  /* color: white; */
+  outline: none;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.tTask {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.total_list {
+  width: 30%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 5px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  height: 45px;
+  width: 15%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #e45f7c;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: black;
+}
+button:hover {
+  background-color: #c2746f;
+}
