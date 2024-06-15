@@ -1,17 +1,27 @@
 let meme = document.querySelector(".memes");
+let button = document.querySelector("#btn");
+let data;
 
-fetch("https://api.memegen.link/templates/")
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-    for (let i = 0; i < data.length; i++) {
-      // console.log(data[i].name);
-      console.log(data[i].example.url);
-      meme.innerHTML += `<img src="${data[i].example.url}" alt="${data[i].name}">`;
-    }
-  });
+const generateNewMeme = () => {
+  let random = Math.floor(Math.random() * data.length);
+  meme.innerHTML = `<img src="${data[random].example.url}" alt="${data[random].name}">`;
+};
 
+window.onload = () => {
+  fetch("https://api.memegen.link/templates/")
+    .then((response) => {
+      return response.json();
+    })
+    .then((response) => {
+      data = response;
+      generateNewMeme();
+    });
+};
 
-  
+button.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (!data) {
+    return;
+  }
+  generateNewMeme();
+});
