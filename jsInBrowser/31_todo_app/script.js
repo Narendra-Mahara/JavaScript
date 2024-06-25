@@ -18,7 +18,6 @@ const addTask = () => {
     alert.style.height = "50px";
     alert.style.width = "200px";
     alert.style.marginTop = "5px";
-    // alert.style.paddingLeft = "10px";
     alert.style.display = "flex";
     alert.style.alignItems = "center";
     alert.style.justifyContent = "space-around";
@@ -42,7 +41,7 @@ const addTask = () => {
     newTodo.style.borderRadius = "0.5rem";
     newTodo.style.display = "flex";
     newTodo.style.alignItems = "center";
-    newTodo.style.paddingLeft = "5px";
+    newTodo.style.paddingLeft = "15px";
     newTodo.style.fontSize = "1.5rem";
     newTodo.style.cursor = "pointer";
     newTodo.style.backgroundColor = "#EADDA6";
