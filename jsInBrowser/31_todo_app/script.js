@@ -22,10 +22,13 @@ const addTask = () => {
     alert.style.display = "flex";
     alert.style.alignItems = "center";
     alert.style.justifyContent = "space-around";
-    alert.style.color = "black";
     mainDiv.before(alert);
     alert.style.border = " 1.5px solid white";
     alert.innerHTML = `<ion-icon name="warning-outline"></ion-icon><p> Please Enter One Task.</p>`;
+    alert.style.backgroundColor = "red";
+    alert.style.fontSize = "1.1rem";
+    alert.style.color = "white";
+    alert.style.border = "1px solid black";
     alert.style.borderRadius = "1rem";
     setTimeout(() => {
       alert.remove();
