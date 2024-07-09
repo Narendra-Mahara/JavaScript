@@ -42,6 +42,6 @@ console.log(name.toLowerCase()); // output: narendra
 console.log(name.slice(2, 4)); // slice the string from index 2 to 4. output: re
 console.log(name.replace("Narendra", "Narendra Mahara")); // replace Narendra with Narendra Mahara. output: Narendra Mahara
 let variable = "     Removed white spaces.     ";
-console.log(variable.trim()); // remove the white spaces from the string. output: Narendra
+console.log(variable.trim()); // remove the white spaces from the string. output: Removed white spaces.
 
 console.log(name.concat(" Mahara")); // output: Narendra Mahara
