@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+}
+
+.container {
+  height: 100px;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container label {
+  font-size: 19px;
+}
+
+.container form {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.container form input {
+  height: 35px;
+  padding-left: 5px;
+  width: 200px;
+  border: 1px solid #ac410f;
+  outline: none;
+  border-radius: 2px;
+  font-size: 20px;
+}
+
+
+.lists {
+  height: 100%;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.lists ol {
+  height: 100%;
+  width: 100%;
+  background-color: blanchedalmond;
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  padding: 5px;
+  flex-wrap: wrap;
+}
