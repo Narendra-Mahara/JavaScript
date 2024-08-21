@@ -24,9 +24,9 @@
 // Always use async and await to fetch the data
 
 let getFacts = async () => {
-  let p = await fetch("https://cat-fact.herokuapp.com/facts"); // returns promise
-  let response = await p.json(); // .json() make it into readable format
-  console.log(response[0].text); // This only prints first facts
+  let response = await fetch("https://cat-fact.herokuapp.com/facts"); // returns promise
+  let value = await response.json(); // .json() make it into readable format
+  console.log(value[0].text); // This only prints first facts
 };
 
 getFacts();
